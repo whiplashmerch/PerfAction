@@ -10,6 +10,8 @@ ENV JMETER_BIN "${JMETER_HOME}/bin"
 ENV PATH "$PATH:$JMETER_BIN"
 ENV JMETER_CMD_RUNNER_VERSION "2.3"
 ENV JMETER_PLUGIN_MANAGER_VERSION "1.7"
+ENV JVM_ARGS "-d64 -Xms1024m -Xmx15360m -server"
+ENV _JAVA_OPTIONS "-d64 -Xms1024m -Xmx15360m -server"
 
 COPY entrypoint.sh /entrypoint.sh
 COPY jmeter-plugin-install.sh /jmeter-plugin-install.sh
